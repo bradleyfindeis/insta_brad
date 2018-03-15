@@ -26,12 +26,6 @@ class AppView extends React.Component {
     return (
       <Container>
         <Link to="/apps">View All Brads</Link>
-        <Button onClick={this.toggleForm}>
-          { showForm ? 'Cancel' : 'Edit' }
-        </Button>
-        <Button color="red" onClick={this.removeApp}>
-          Delete
-        </Button>
         { showForm ?
             <AppForm {...app} closeForm={this.toggleForm} />
             :
@@ -54,6 +48,12 @@ class AppView extends React.Component {
                   </Table.Row>
                 </Table.Body>
               </Table>
+              <Button  color="purple" onClick={this.toggleForm}>
+                { showForm ? 'Cancel' : 'Edit' }
+              </Button>
+              <Button color="red" onClick={this.removeApp}>
+                Delete
+              </Button>
             </div>
           }
       </Container>
