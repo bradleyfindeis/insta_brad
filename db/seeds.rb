@@ -1,4 +1,4 @@
-20.times do
+200.times do
   App.create(
     name: Faker::HarryPotter.character,
     image: Faker::Avatar.image,
